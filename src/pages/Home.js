@@ -5,7 +5,7 @@ import { PostContext } from "../context/PostContext";
 import Post from "../components/Post";
 
 export default function Home() {
-  const { addPost ,setAddPost} = useContext(PostContext);
+  const { addPost, setAddPost } = useContext(PostContext);
 
   const handleReact = (postId, key) => {
     // functional update to avoid stale state
@@ -29,7 +29,9 @@ export default function Home() {
   return (
     <div className="App">
       <h1>GenZ</h1>
-      <NavBar />
+      <a href="/">Posts</a>
+      <a href="/users">Users</a>
+      <a href="/notifications">Notifications</a>
       <AddNewPost />
       <div className="posts-list">
         <h2>Posts</h2> {/* 1st child */}
